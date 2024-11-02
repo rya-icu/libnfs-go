@@ -114,6 +114,7 @@ const (
 	PROC4_COMPOUND = uint32(1)
 )
 
+// nfsv4将多个指令打包到一个RPC调用，通过COMPOUND，在进行拆解，下面的指令；
 const (
 	OP4_ACCESS              = uint32(3)
 	OP4_CLOSE               = uint32(4)
@@ -131,7 +132,7 @@ const (
 	OP4_LOOKUPP             = uint32(16)
 	OP4_NVERIFY             = uint32(17)
 	OP4_OPEN                = uint32(18)
-	OP4_OPENATTR            = uint32(19)
+	OP4_OPENATTR            = uint32(19) // 通过调用name对应的属性；
 	OP4_OPEN_CONFIRM        = uint32(20)
 	OP4_OPEN_DOWNGRADE      = uint32(21)
 	OP4_PUTFH               = uint32(22)
